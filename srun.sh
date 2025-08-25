@@ -1,26 +1,24 @@
-#!/bin/bash
-#SBATCH --job-name=condiv_run
-#SBATCH --partition=caslake
-#SBATCH --nodes=1
-#SBATCH --ntasks=6
-#SBATCH --cpus-per-task=6
-#SBATCH --time=35:00:00
-#SBATCH --mail-user=okleinmann@rcc.uchicago.edu
-#SBATCH --mail-type=END,FAIL
-#SBATCH --output=condiv_run_%j.out
-#SBATCH --error=condiv_run_%j.err
-
 export MKL_THREADING_LAYER=GNU
+export UPSIDE_HOME=/home/okleinmann/upside2-md/py3/
+export THEANO_FLAGS='blas.ldflags='
 
-X=`pwd`
-Y=test_00
+X=pwd
+Y=condiv_training_results
 
 mode=restart
 checkpoint=$X/$Y/initial_checkpoint.pkl
 
-batch_size=6 # number of proteins total
-n_rpx=6 # number of cpu cores
-step=5 # number of training loops
+epoch=4
+batch=15
+n_rpx=10
+total=$(ls selection/pdbs/alpha | wc -l)
+repeat=1
 
-echo python3.7 $X/$Y/condiv2.py $mode $checkpoint $step | tee -a $X/$Y.output
-python3.7 $X/$Y/condiv2.py $mode $checkpoint $step | tee -a $X/$Y.output
+p=caslake
+
+let step=(total/batch)*epoch*repeat
+
+#caslake
+salloc --partition $p -t 00:10:00 --account=pi-trsosnic --job-name=condiv --ntasks=$batch --cpus-per-task=$n_rpx python $Y/condiv2.py $mode $checkpoint $step | tee -a $Y.output
+
+

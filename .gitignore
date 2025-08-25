@@ -1,0 +1,6 @@
+*.pdb
+*.pkl
+*.chi
+*.npy
+*.pyc
+*.fasta

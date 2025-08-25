@@ -1,0 +1,11 @@
+Order	PDB_Chain	Type	Length	Max_Identity_to_Set
+1	1AGL_1|Chain	alpha	6	0.0000
+2	1BDD_1|Chain	alpha	60	0.0312
+3	1AVP_2|Chain	alpha	11	0.1333
+4	1CRN_1|Chain	alpha	46	0.1648
+5	1HTM_1|Chains	alpha	27	0.1786
+6	1UBQ_1|Chain	alpha	76	0.1826
+7	1VII_1|Chain	alpha	36	0.1852
+8	1FSD_1|Chain	alpha	28	0.1892
+9	1APS_1|Chain	alpha	98	0.2000
+10	1BBA_1|Chain	alpha	36	0.2059

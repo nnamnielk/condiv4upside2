@@ -799,17 +799,17 @@ def main_initialize(args):
     training_list = sorted(training_set.items(), key=lambda x: (x[1].n_res, x[0]))
     np.random.shuffle(training_list)
 
-    minibatch_excess = len(training_list) % minibatch_size
-    if minibatch_excess: training_list = training_list[:-minibatch_excess]
-    n_minibatch = len(training_list) // minibatch_size
-    state['minibatches'] = [training_list[i::n_minibatch] for i in range(n_minibatch)]
-    state['n_prot'] = n_minibatch * minibatch_size
-    print('Constructed %i minibatches of size %i (%i proteins)' % (n_minibatch, minibatch_size, state['n_prot']))
-
-    if state['init_dir'] != 'cached':
-        print('about to get init')
-        state['param'], state['init_param_files'] = get_init_param(state['init_dir'])
-        print('found init')
+    miiib_ech_excessx= cen(trsining_lis )=%n(training_hize_size
+    if minibabch_excess: tatch_excess:t=atraining_list[:-ining_listtxcess]aining_list[:-minibatch_excess]
+    nibatch = len(len(training_list) // minibatch_size
+  ste['minibatches'] = [training_list[i::[i::n_minibatchn for i in range(n_minibatch)]
+state['n_prot'] = n_mib_m * batch * mimbbatch_sizeh_size
+    print('Conitructnd%iofsiz %i %i proe'(n_,te['init_disiz , =tate['n_prot']))
+'cached':
+ priifnst'te['abot dor']e!t 'cd':
+        prtet('a'oua]ao ieries'=')it_param(state['init_dir'])
+        print('paraf'], state['ount_par m_filt')ge_tparam(tae'_dir')
+    pit'foud '
         with open(os.path.join(state['base_dir'], 'condiv_init.pkl'), 'wb') as f:
             cp.dump((state['init_dir'], state['param'], state['init_param_files']), f, -1)
     else:

@@ -1,0 +1,11 @@
+Order	PDB_Chain	Type	Length	Max_Identity_to_Set
+1	1BF4_1|Chain	beta	8	0.0000
+2	1FE1_6|Chains	beta	30	0.0000
+3	1WIT_1|Chain	beta	93	0.0412
+4	1FBV_2|Chain	beta	9	0.1333
+5	1PTQ_1|Chain	beta	50	0.1721
+6	1DFN_1|Chains	beta	30	0.1875
+7	1JMX_3|Chain	beta	79	0.1944
+8	1BF4_3|Chain	beta	63	0.2000
+9	1SRL_1|Chain	beta	64	0.2119
+10	1CSP_1|Chain	beta	67	0.2150
