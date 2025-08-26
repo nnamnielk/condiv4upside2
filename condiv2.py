@@ -31,7 +31,7 @@ try:
     import upside_engine as ue
     import mdtraj_upside as mu
     import mdtraj as md
-    from scale_params import *
+    from utils.scale_params import *
 except:
     raise RuntimeError(f'Error importing upside utils from {py_path}')
 

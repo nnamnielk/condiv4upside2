@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "/project2/trsosnic/okleinmann/condiv/condiv_training_results/condiv2.py", line 13, in <module>
-    import numpy as np
-ModuleNotFoundError: No module named 'numpy'
