@@ -1,0 +1,1506 @@
+Reading training set
+Excluded 0 proteins due to chain breaks
+Constructed 202 minibatches of size 2 (404 proteins)
+about to get init
+4.3510910066434154e-05
+found init
+
+Optimizing with solver AdamSolver(14, alpha=Update(enve=0.04000000000000001, envc=0.020000000000000004, envs=0.008, envw=0.04000000000000001, bbenve=0.020000000000000004, bbenvc=0.0, bbenvs=0.0, bbenvw=0.0, cov=0.0, rot=0.1, hyd=0.0, hb=0.008, dhb=0.004, sheet=0.012), beta1=0.8, beta2=0.96, epsilon=1e-06)
+
+
+hb  -1.960895174142656 -1.9462795968186488 -1.7689773293621622 -0.4057851963982234
+sheet 0.161
+env
+    ASP [-1.01  5.82  1.02  0.56]
+    GLU [-1.55  4.96  0.17  0.92]
+    LYS [-4.26  5.32  0.75  0.82]
+    HIS [1.43 2.91 0.49 0.95]
+    ARG [-3.96  5.48  0.78  1.1 ]
+    GLY [-1.12 -0.27  0.17  0.62]
+    ASN [-0.72 -0.58  0.28  0.76]
+    GLN [-1.09  5.08  0.44  1.25]
+    ALA [1.05 4.03 0.5  0.72]
+    SER [-0.51 -0.32  0.45  0.98]
+    THR [-0.96 -0.17  0.22  0.69]
+    PRO [-0.54  5.72 -0.28  1.2 ]
+    CYS [1.45 3.61 0.48 0.9 ]
+    VAL [1.78 4.63 0.32 1.17]
+    MET [1.36 3.17 0.41 1.2 ]
+    TYR [2.53 3.53 0.53 1.76]
+    ILE [2.41 4.27 0.35 1.28]
+    LEU [1.48 4.3  0.35 1.41]
+    PHE [0.9  3.39 0.99 1.52]
+    TRP [1.03 3.32 0.8  2.12]
+bb env
+-0.30142811281071186 2.0 0.5 2.0
+
+Running as PID 1129204 on host midway3-0134.rcc.local
+#########################################
+####      EPOCH  0 MINIBATCH  0      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_00
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_00/2uyy.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 2uyy
+DEBUG: Worker 7k86 failed with exit code 1
+7k86 WORKER_FAIL
+
+Median RMSD 0.00 0.00
+hb  -1.968895173981132 -1.9542795935287605 -1.7769768139663056 -0.40978519618395975
+sheet 0.166
+env
+    ASP [-1.05  5.8   1.01  0.52]
+    GLU [-1.59  4.98  0.17  0.96]
+    LYS [-4.22  5.34  0.75  0.78]
+    HIS [1.43 2.91 0.49 0.91]
+    ARG [-3.96  5.48  0.78  1.14]
+    GLY [-1.08 -0.29  0.18  0.66]
+    ASN [-0.68 -0.6   0.29  0.8 ]
+    GLN [-1.05  5.1   0.43  1.29]
+    ALA [1.09 4.01 0.51 0.76]
+    SER [-0.47 -0.34  0.46  1.02]
+    THR [-0.92 -0.19  0.22  0.73]
+    PRO [-0.5   5.74 -0.29  1.16]
+    CYS [1.41 3.59 0.49 0.94]
+    VAL [1.82 4.61 0.33 1.21]
+    MET [1.4  3.19 0.42 1.24]
+    TYR [2.57 3.51 0.52 1.8 ]
+    ILE [2.45 4.25 0.36 1.32]
+    LEU [1.52 4.28 0.36 1.45]
+    PHE [0.94 3.37 0.98 1.48]
+    TRP [1.03 3.32 0.8  2.12]
+bb env
+-0.2814281132452129 2.0 0.5 2.0
+
+68 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH  1      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_01
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_01/1x3o.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 1x3o
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_01/2euf.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 2euf
+
+Median RMSD 0.00 0.00
+hb  -1.9769277730072126 -1.9622028165424645 -1.7710579096576646 -0.41378097595245117
+sheet 0.169
+env
+    ASP [-1.08  5.79  1.01  0.55]
+    GLU [-1.63  4.97  0.18  0.93]
+    LYS [-4.18  5.36  0.76  0.81]
+    HIS [1.43 2.91 0.49 0.89]
+    ARG [-3.96  5.48  0.78  1.14]
+    GLY [-1.05 -0.31  0.18  0.7 ]
+    ASN [-0.67 -0.61  0.3   0.83]
+    GLN [-1.02  5.12  0.43  1.32]
+    ALA [1.13 4.   0.52 0.8 ]
+    SER [-0.43 -0.36  0.46  1.05]
+    THR [-0.88 -0.21  0.21  0.77]
+    PRO [-0.53  5.72 -0.28  1.19]
+    CYS [1.44 3.57 0.49 0.98]
+    VAL [1.86 4.59 0.33 1.25]
+    MET [1.43 3.18 0.42 1.27]
+    TYR [2.61 3.49 0.52 1.84]
+    ILE [2.49 4.24 0.37 1.36]
+    LEU [1.56 4.26 0.36 1.49]
+    PHE [0.97 3.35 0.97 1.51]
+    TRP [1.06 3.3  0.8  2.09]
+bb env
+-0.2613718890475805 2.0 0.5 2.0
+
+54 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH  2      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_02
+
+DEBUG: Worker 1ik7 failed with exit code 1
+1ik7 WORKER_FAIL
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_02/2iu5.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 2iu5
+
+Median RMSD 0.00 0.00
+hb  -1.9838989827852644 -1.9694089190189423 -1.7666964803667262 -0.41722054512814055
+sheet 0.171
+env
+    ASP [-1.1   5.78  1.    0.58]
+    GLU [-1.62  4.98  0.19  0.92]
+    LYS [-4.15  5.37  0.76  0.83]
+    HIS [1.43 2.91 0.49 0.86]
+    ARG [-3.96  5.48  0.78  1.14]
+    GLY [-1.02 -0.32  0.19  0.73]
+    ASN [-0.64 -0.62  0.3   0.86]
+    GLN [-0.99  5.14  0.44  1.35]
+    ALA [1.16 3.98 0.53 0.83]
+    SER [-0.39 -0.37  0.45  1.06]
+    THR [-0.84 -0.23  0.2   0.81]
+    PRO [-0.55  5.71 -0.27  1.21]
+    CYS [1.46 3.56 0.5  1.01]
+    VAL [1.88 4.57 0.34 1.28]
+    MET [1.46 3.16 0.42 1.3 ]
+    TYR [2.65 3.47 0.52 1.88]
+    ILE [2.52 4.22 0.37 1.38]
+    LEU [1.59 4.24 0.37 1.52]
+    PHE [1.01 3.34 0.97 1.54]
+    TRP [1.09 3.28 0.8  2.08]
+bb env
+-0.2427914939021491 2.0 0.5 2.0
+
+33 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH  3      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_03
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_03/2ff4.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 2ff4
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_03/1xxs.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 1xxs
+
+Median RMSD 0.00 0.00
+hb  -1.9913610514428395 -1.9766496114107117 -1.7607699942966766 -0.42092084210276076
+sheet 0.170
+env
+    ASP [-1.07  5.77  1.    0.6 ]
+    GLU [-1.6   4.99  0.2   0.92]
+    LYS [-4.12  5.39  0.76  0.87]
+    HIS [1.45 2.9  0.49 0.88]
+    ARG [-3.98  5.46  0.78  1.16]
+    GLY [-0.98 -0.34  0.19  0.76]
+    ASN [-0.61 -0.64  0.3   0.88]
+    GLN [-0.96  5.15  0.43  1.38]
+    ALA [1.2  3.96 0.53 0.87]
+    SER [-0.35 -0.38  0.45  1.09]
+    THR [-0.8  -0.25  0.19  0.85]
+    PRO [-0.58  5.71 -0.28  1.24]
+    CYS [1.49 3.54 0.51 1.05]
+    VAL [1.91 4.56 0.34 1.31]
+    MET [1.49 3.15 0.43 1.33]
+    TYR [2.68 3.46 0.52 1.91]
+    ILE [2.56 4.2  0.38 1.41]
+    LEU [1.63 4.22 0.37 1.56]
+    PHE [1.04 3.33 0.97 1.57]
+    TRP [1.12 3.26 0.79 2.1 ]
+bb env
+-0.2234482706801787 2.0 0.5 2.0
+
+98 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH  4      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_04
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_04/1pzn.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 1pzn
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_04/6eni.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 6eni
+
+Median RMSD 0.00 0.00
+hb  -1.9989787094017073 -1.9837844916954674 -1.7550349057181678 -0.42471786887831037
+sheet 0.171
+env
+    ASP [-1.06  5.77  1.    0.62]
+    GLU [-1.57  5.01  0.2   0.94]
+    LYS [-4.09  5.4   0.76  0.9 ]
+    HIS [1.47 2.89 0.49 0.9 ]
+    ARG [-4.    5.46  0.78  1.2 ]
+    GLY [-0.95 -0.36  0.19  0.79]
+    ASN [-0.57 -0.65  0.3   0.87]
+    GLN [-0.93  5.16  0.43  1.4 ]
+    ALA [1.24 3.94 0.54 0.9 ]
+    SER [-0.32 -0.4   0.44  1.11]
+    THR [-0.77 -0.26  0.19  0.89]
+    PRO [-0.61  5.7  -0.28  1.26]
+    CYS [1.51 3.53 0.51 1.07]
+    VAL [1.94 4.54 0.34 1.34]
+    MET [1.52 3.14 0.43 1.36]
+    TYR [2.71 3.45 0.53 1.94]
+    ILE [2.6  4.18 0.38 1.44]
+    LEU [1.66 4.21 0.38 1.6 ]
+    PHE [1.06 3.32 0.97 1.6 ]
+    TRP [1.15 3.26 0.79 2.11]
+bb env
+-0.2039346692124662 2.0 0.5 2.0
+
+49 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH  5      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_05
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_05/1dlw.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 1dlw
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_05/4npd.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 4npd
+
+Median RMSD 0.00 0.00
+hb  -2.0066477896416854 -1.991066505961023 -1.7533074197269236 -0.428521868097366
+sheet 0.172
+env
+    ASP [-1.04  5.76  1.    0.63]
+    GLU [-1.56  5.02  0.21  0.96]
+    LYS [-4.09  5.41  0.76  0.92]
+    HIS [1.49 2.88 0.49 0.93]
+    ARG [-4.02  5.45  0.78  1.23]
+    GLY [-0.92 -0.37  0.19  0.83]
+    ASN [-0.56 -0.66  0.3   0.86]
+    GLN [-0.9   5.18  0.44  1.43]
+    ALA [1.27 3.92 0.55 0.93]
+    SER [-0.29 -0.41  0.44  1.14]
+    THR [-0.75 -0.27  0.18  0.93]
+    PRO [-0.59  5.69 -0.27  1.27]
+    CYS [1.54 3.52 0.52 1.1 ]
+    VAL [1.97 4.52 0.34 1.38]
+    MET [1.54 3.12 0.43 1.4 ]
+    TYR [2.74 3.44 0.53 1.96]
+    ILE [2.63 4.17 0.39 1.46]
+    LEU [1.7  4.19 0.39 1.63]
+    PHE [1.09 3.31 0.97 1.63]
+    TRP [1.17 3.25 0.79 2.13]
+bb env
+-0.18494278405309314 2.0 0.5 2.0
+
+55 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH  6      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_06
+
+DEBUG: Worker 6xp1 failed with exit code 1
+6xp1 WORKER_FAIL
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_06/1ug3.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 1ug3
+
+Median RMSD 0.00 0.00
+hb  -2.0144877177085845 -1.9981106758416494 -1.7539217787127448 -0.4324080287556711
+sheet 0.175
+env
+    ASP [-1.05  5.75  1.    0.63]
+    GLU [-1.53  5.04  0.22  0.99]
+    LYS [-4.1   5.42  0.76  0.95]
+    HIS [1.51 2.88 0.49 0.94]
+    ARG [-4.05  5.44  0.78  1.25]
+    GLY [-0.9  -0.39  0.2   0.86]
+    ASN [-0.54 -0.66  0.3   0.85]
+    GLN [-0.9   5.19  0.44  1.46]
+    ALA [1.29 3.91 0.55 0.95]
+    SER [-0.25 -0.42  0.43  1.18]
+    THR [-0.73 -0.28  0.18  0.96]
+    PRO [-0.56  5.69 -0.27  1.26]
+    CYS [1.55 3.51 0.52 1.12]
+    VAL [2.01 4.5  0.35 1.41]
+    MET [1.57 3.11 0.43 1.43]
+    TYR [2.76 3.44 0.54 1.97]
+    ILE [2.67 4.15 0.39 1.48]
+    LEU [1.74 4.17 0.39 1.67]
+    PHE [1.13 3.3  0.97 1.67]
+    TRP [1.2  3.24 0.79 2.16]
+bb env
+-0.16588145456969255 2.0 0.5 2.0
+
+74 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH  7      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_07
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_07/3l2d.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 3l2d
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_07/2cpg.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 2cpg
+
+Median RMSD 0.00 0.00
+hb  -2.021791064980857 -2.0052541065215537 -1.7543805084239172 -0.43596057812215877
+sheet 0.175
+env
+    ASP [-1.06  5.74  0.99  0.64]
+    GLU [-1.52  5.05  0.22  1.  ]
+    LYS [-4.11  5.42  0.77  0.97]
+    HIS [1.52 2.89 0.5  0.96]
+    ARG [-4.08  5.44  0.78  1.28]
+    GLY [-0.87 -0.4   0.21  0.88]
+    ASN [-0.51 -0.67  0.3   0.86]
+    GLN [-0.89  5.21  0.45  1.49]
+    ALA [1.31 3.89 0.56 0.97]
+    SER [-0.24 -0.43  0.43  1.21]
+    THR [-0.71 -0.29  0.17  1.  ]
+    PRO [-0.54  5.68 -0.26  1.26]
+    CYS [1.58 3.5  0.52 1.14]
+    VAL [2.04 4.48 0.35 1.45]
+    MET [1.6  3.09 0.44 1.47]
+    TYR [2.79 3.44 0.54 1.97]
+    ILE [2.71 4.14 0.4  1.5 ]
+    LEU [1.78 4.16 0.4  1.7 ]
+    PHE [1.16 3.29 0.97 1.7 ]
+    TRP [1.23 3.23 0.79 2.19]
+bb env
+-0.1475999438734053 2.0 0.5 2.0
+
+45 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH  8      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_08
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_08/1xqo.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 1xqo
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_08/1nu9.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 1nu9
+
+Median RMSD 0.00 0.00
+hb  -2.029695650487271 -2.012954915135385 -1.7569690854333806 -0.43984970763852577
+sheet 0.176
+env
+    ASP [-1.06  5.75  0.99  0.64]
+    GLU [-1.51  5.06  0.23  1.02]
+    LYS [-4.14  5.43  0.77  0.99]
+    HIS [1.55 2.88 0.5  0.98]
+    ARG [-4.11  5.45  0.79  1.3 ]
+    GLY [-0.84 -0.42  0.21  0.91]
+    ASN [-0.48 -0.68  0.3   0.88]
+    GLN [-0.86  5.23  0.45  1.52]
+    ALA [1.34 3.88 0.56 1.  ]
+    SER [-0.21 -0.44  0.44  1.23]
+    THR [-0.68 -0.3   0.17  1.04]
+    PRO [-0.55  5.67 -0.25  1.26]
+    CYS [1.61 3.48 0.53 1.17]
+    VAL [2.08 4.46 0.36 1.47]
+    MET [1.64 3.07 0.44 1.51]
+    TYR [2.82 3.43 0.55 1.98]
+    ILE [2.74 4.13 0.4  1.52]
+    LEU [1.81 4.14 0.41 1.73]
+    PHE [1.19 3.29 0.98 1.73]
+    TRP [1.27 3.22 0.79 2.21]
+bb env
+-0.12783832201999235 2.0 0.5 2.0
+
+122 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH  9      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_09
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_09/1brw.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 1brw
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_09/1zuj.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 1zuj
+
+Median RMSD 0.00 0.00
+hb  -2.0374993908864822 -2.020336160514076 -1.7577323127729128 -0.44354156722869076
+sheet 0.177
+env
+    ASP [-1.05  5.75  1.    0.65]
+    GLU [-1.48  5.08  0.24  1.05]
+    LYS [-4.16  5.44  0.77  1.01]
+    HIS [1.59 2.88 0.5  1.01]
+    ARG [-4.14  5.46  0.8   1.33]
+    GLY [-0.82 -0.43  0.21  0.91]
+    ASN [-0.45 -0.69  0.3   0.9 ]
+    GLN [-0.84  5.25  0.46  1.56]
+    ALA [1.38 3.87 0.57 1.03]
+    SER [-0.17 -0.46  0.44  1.26]
+    THR [-0.66 -0.31  0.17  1.06]
+    PRO [-0.56  5.66 -0.25  1.26]
+    CYS [1.63 3.47 0.53 1.19]
+    VAL [2.12 4.44 0.36 1.5 ]
+    MET [1.67 3.05 0.44 1.56]
+    TYR [2.86 3.41 0.55 1.98]
+    ILE [2.78 4.11 0.41 1.54]
+    LEU [1.85 4.12 0.42 1.76]
+    PHE [1.23 3.28 0.98 1.75]
+    TRP [1.3  3.21 0.8  2.23]
+bb env
+-0.10767677897415746 2.0 0.5 2.0
+
+75 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 10      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_10
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_10/4nqg.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 4nqg
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_10/4igu.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 4igu
+
+Median RMSD 0.00 0.00
+hb  -2.0456277081895102 -2.0283531238981567 -1.7569030440483848 -0.4474527528379102
+sheet 0.177
+env
+    ASP [-1.07  5.76  1.01  0.67]
+    GLU [-1.45  5.1   0.24  1.09]
+    LYS [-4.2   5.43  0.78  1.04]
+    HIS [1.62 2.87 0.51 1.04]
+    ARG [-4.16  5.46  0.8   1.37]
+    GLY [-0.8  -0.45  0.22  0.93]
+    ASN [-0.41 -0.71  0.3   0.92]
+    GLN [-0.8   5.27  0.47  1.59]
+    ALA [1.41 3.86 0.57 1.07]
+    SER [-0.14 -0.48  0.45  1.28]
+    THR [-0.64 -0.32  0.17  1.1 ]
+    PRO [-0.57  5.64 -0.24  1.28]
+    CYS [1.66 3.46 0.53 1.22]
+    VAL [2.15 4.42 0.37 1.52]
+    MET [1.71 3.04 0.45 1.6 ]
+    TYR [2.89 3.4  0.56 1.99]
+    ILE [2.82 4.09 0.42 1.56]
+    LEU [1.89 4.1  0.42 1.78]
+    PHE [1.27 3.28 0.98 1.78]
+    TRP [1.34 3.2  0.8  2.27]
+bb env
+-0.08679841015067238 2.0 0.5 2.0
+
+104 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 11      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_11
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_11/7emk.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 7emk
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_11/2esn.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 2esn
+
+Median RMSD 0.00 0.00
+hb  -2.053760665379821 -2.036278238853325 -1.7569000798242929 -0.45145669499688335
+sheet 0.177
+env
+    ASP [-1.09  5.77  1.01  0.7 ]
+    GLU [-1.42  5.11  0.25  1.12]
+    LYS [-4.23  5.42  0.78  1.06]
+    HIS [1.66 2.87 0.51 1.08]
+    ARG [-4.19  5.46  0.8   1.41]
+    GLY [-0.78 -0.46  0.22  0.96]
+    ASN [-0.38 -0.72  0.3   0.95]
+    GLN [-0.77  5.28  0.47  1.61]
+    ALA [1.45 3.85 0.58 1.1 ]
+    SER [-0.1  -0.49  0.45  1.31]
+    THR [-0.62 -0.33  0.17  1.12]
+    PRO [-0.59  5.63 -0.24  1.3 ]
+    CYS [1.69 3.46 0.54 1.24]
+    VAL [2.19 4.4  0.38 1.55]
+    MET [1.75 3.04 0.46 1.64]
+    TYR [2.92 3.39 0.57 2.02]
+    ILE [2.86 4.08 0.42 1.59]
+    LEU [1.92 4.09 0.43 1.81]
+    PHE [1.31 3.27 0.99 1.82]
+    TRP [1.38 3.19 0.8  2.3 ]
+bb env
+-0.0662909703196784 2.0 0.5 2.0
+
+65 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 12      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_12
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_12/6ipn.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 6ipn
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_12/4l8e.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 4l8e
+
+Median RMSD 0.00 0.00
+hb  -2.061645710813971 -2.044112819663501 -1.7552860585184444 -0.4553184039948884
+sheet 0.177
+env
+    ASP [-1.11  5.78  1.02  0.72]
+    GLU [-1.4   5.13  0.26  1.15]
+    LYS [-4.27  5.42  0.79  1.08]
+    HIS [1.69 2.85 0.51 1.11]
+    ARG [-4.21  5.46  0.8   1.45]
+    GLY [-0.77 -0.47  0.22  0.99]
+    ASN [-0.36 -0.73  0.3   0.96]
+    GLN [-0.73  5.3   0.47  1.64]
+    ALA [1.48 3.85 0.58 1.13]
+    SER [-0.07 -0.51  0.46  1.32]
+    THR [-0.59 -0.34  0.16  1.15]
+    PRO [-0.6   5.62 -0.23  1.33]
+    CYS [1.71 3.45 0.54 1.26]
+    VAL [2.23 4.38 0.38 1.58]
+    MET [1.79 3.03 0.46 1.67]
+    TYR [2.96 3.38 0.57 2.05]
+    ILE [2.89 4.06 0.42 1.62]
+    LEU [1.96 4.07 0.43 1.84]
+    PHE [1.35 3.27 0.99 1.85]
+    TRP [1.42 3.19 0.81 2.31]
+bb env
+-0.04666059264931867 2.0 0.5 2.0
+
+57 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 13      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_13
+
+DEBUG: Worker 2b8w failed with exit code 1
+2b8w WORKER_FAIL
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_13/2dfk.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 2dfk
+
+Median RMSD 0.00 0.00
+hb  -2.0695501634208298 -2.0512649491736727 -1.752674932149422 -0.4591805400378991
+sheet 0.178
+env
+    ASP [-1.13  5.78  1.02  0.75]
+    GLU [-1.38  5.14  0.26  1.18]
+    LYS [-4.3   5.41  0.79  1.1 ]
+    HIS [1.72 2.84 0.51 1.14]
+    ARG [-4.23  5.46  0.8   1.49]
+    GLY [-0.74 -0.49  0.23  1.01]
+    ASN [-0.33 -0.74  0.3   0.98]
+    GLN [-0.69  5.32  0.47  1.66]
+    ALA [1.51 3.84 0.59 1.16]
+    SER [-0.04 -0.52  0.46  1.33]
+    THR [-0.57 -0.35  0.16  1.17]
+    PRO [-0.61  5.61 -0.23  1.34]
+    CYS [1.74 3.44 0.55 1.28]
+    VAL [2.26 4.36 0.39 1.61]
+    MET [1.83 3.02 0.47 1.71]
+    TYR [2.99 3.36 0.58 2.06]
+    ILE [2.93 4.05 0.43 1.64]
+    LEU [2.   4.05 0.44 1.87]
+    PHE [1.39 3.27 0.99 1.89]
+    TRP [1.45 3.18 0.81 2.32]
+bb env
+-0.02689943221054637 2.0 0.5 2.0
+
+73 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 14      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_14
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_14/1pgj.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 1pgj
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_14/3nar.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 3nar
+
+Median RMSD 0.00 0.00
+hb  -2.077867262779004 -2.0588794891723943 -1.7480769356794514 -0.46323558331928333
+sheet 0.179
+env
+    ASP [-1.16  5.78  1.03  0.77]
+    GLU [-1.37  5.16  0.27  1.21]
+    LYS [-4.33  5.41  0.8   1.12]
+    HIS [1.75 2.82 0.51 1.17]
+    ARG [-4.26  5.46  0.81  1.53]
+    GLY [-0.74 -0.49  0.23  1.02]
+    ASN [-0.31 -0.75  0.3   1.01]
+    GLN [-0.66  5.33  0.47  1.69]
+    ALA [1.54 3.83 0.59 1.19]
+    SER [ 0.   -0.53  0.46  1.36]
+    THR [-0.55 -0.36  0.15  1.19]
+    PRO [-0.63  5.6  -0.23  1.37]
+    CYS [1.77 3.43 0.55 1.31]
+    VAL [2.3  4.35 0.39 1.64]
+    MET [1.87 3.03 0.48 1.74]
+    TYR [3.03 3.35 0.59 2.09]
+    ILE [2.96 4.04 0.43 1.66]
+    LEU [2.03 4.04 0.45 1.89]
+    PHE [1.43 3.26 1.   1.93]
+    TRP [1.49 3.18 0.81 2.33]
+bb env
+-0.00695162611128387 2.0 0.5 2.0
+
+119 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 15      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_15
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_15/1rz4.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 1rz4
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_15/6hav.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 6hav
+
+Median RMSD 0.00 0.00
+hb  -2.086081176212424 -2.0663911171761495 -1.7426800165772118 -0.46723036580497707
+sheet 0.181
+env
+    ASP [-1.17  5.77  1.03  0.79]
+    GLU [-1.36  5.18  0.28  1.24]
+    LYS [-4.36  5.4   0.8   1.15]
+    HIS [1.78 2.81 0.51 1.18]
+    ARG [-4.29  5.45  0.81  1.56]
+    GLY [-0.74 -0.49  0.23  1.03]
+    ASN [-0.28 -0.76  0.3   1.03]
+    GLN [-0.64  5.34  0.47  1.72]
+    ALA [1.57 3.83 0.59 1.23]
+    SER [ 0.04 -0.54  0.47  1.38]
+    THR [-0.53 -0.36  0.14  1.21]
+    PRO [-0.64  5.58 -0.22  1.4 ]
+    CYS [1.8  3.42 0.55 1.34]
+    VAL [2.34 4.33 0.39 1.67]
+    MET [1.91 3.03 0.48 1.77]
+    TYR [3.06 3.33 0.59 2.11]
+    ILE [3.   4.03 0.44 1.68]
+    LEU [2.07 4.02 0.45 1.92]
+    PHE [1.46 3.24 1.   1.96]
+    TRP [1.52 3.17 0.81 2.35]
+bb env
+0.012601162587336977 2.0 0.5 2.0
+
+69 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 16      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_16
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_16/5xb1.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 5xb1
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_16/1m8t.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 1m8t
+
+Median RMSD 0.00 0.00
+hb  -2.0937622503205944 -2.0740820531934308 -1.7368624733572795 -0.470781226497049
+sheet 0.182
+env
+    ASP [-1.19  5.78  1.04  0.82]
+    GLU [-1.37  5.19  0.28  1.26]
+    LYS [-4.39  5.39  0.8   1.17]
+    HIS [1.81 2.79 0.51 1.2 ]
+    ARG [-4.31  5.45  0.81  1.6 ]
+    GLY [-0.73 -0.5   0.23  1.04]
+    ASN [-0.25 -0.77  0.3   1.06]
+    GLN [-0.61  5.36  0.47  1.74]
+    ALA [1.6  3.83 0.59 1.25]
+    SER [ 0.07 -0.55  0.47  1.41]
+    THR [-0.53 -0.37  0.14  1.22]
+    PRO [-0.66  5.57 -0.22  1.42]
+    CYS [1.83 3.42 0.55 1.36]
+    VAL [2.37 4.31 0.4  1.7 ]
+    MET [1.95 3.03 0.49 1.79]
+    TYR [3.09 3.32 0.6  2.14]
+    ILE [3.03 4.02 0.44 1.7 ]
+    LEU [2.1  4.   0.46 1.95]
+    PHE [1.5  3.23 1.   2.  ]
+    TRP [1.54 3.18 0.8  2.36]
+bb env
+0.03134450835614951 2.0 0.5 2.0
+
+91 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 17      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_17
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_17/2zpy.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 2zpy
+DEBUG: Worker 2hwn failed with exit code 1
+2hwn WORKER_FAIL
+
+Median RMSD 0.00 0.00
+hb  -2.100453805887132 -2.080951153546023 -1.7320181895687283 -0.4738672150864225
+sheet 0.183
+env
+    ASP [-1.21  5.77  1.04  0.85]
+    GLU [-1.37  5.2   0.29  1.29]
+    LYS [-4.42  5.39  0.8   1.19]
+    HIS [1.84 2.77 0.51 1.22]
+    ARG [-4.33  5.45  0.81  1.63]
+    GLY [-0.73 -0.5   0.24  1.05]
+    ASN [-0.22 -0.78  0.31  1.08]
+    GLN [-0.59  5.37  0.47  1.77]
+    ALA [1.62 3.82 0.6  1.28]
+    SER [ 0.1  -0.56  0.47  1.44]
+    THR [-0.53 -0.37  0.14  1.22]
+    PRO [-0.67  5.56 -0.21  1.44]
+    CYS [1.86 3.42 0.56 1.38]
+    VAL [2.39 4.3  0.4  1.72]
+    MET [1.99 3.03 0.5  1.82]
+    TYR [3.12 3.31 0.6  2.16]
+    ILE [3.06 4.01 0.45 1.73]
+    LEU [2.13 3.98 0.47 1.98]
+    PHE [1.52 3.22 1.   2.04]
+    TRP [1.56 3.18 0.8  2.39]
+bb env
+0.04782813872445065 2.0 0.5 2.0
+
+33 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 18      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_18
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_18/4dem.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 4dem
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_18/1aa7.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 1aa7
+
+Median RMSD 0.00 0.00
+hb  -2.1083144095207804 -2.088706139344183 -1.7256624091370545 -0.47764257445767705
+sheet 0.186
+env
+    ASP [-1.24  5.77  1.05  0.84]
+    GLU [-1.4   5.21  0.29  1.32]
+    LYS [-4.46  5.39  0.8   1.19]
+    HIS [1.86 2.76 0.51 1.23]
+    ARG [-4.35  5.46  0.81  1.64]
+    GLY [-0.73 -0.5   0.23  1.03]
+    ASN [-0.2  -0.79  0.31  1.08]
+    GLN [-0.61  5.37  0.47  1.79]
+    ALA [1.65 3.82 0.6  1.29]
+    SER [ 0.13 -0.56  0.47  1.43]
+    THR [-0.53 -0.37  0.14  1.22]
+    PRO [-0.64  5.56 -0.2   1.46]
+    CYS [1.89 3.43 0.56 1.37]
+    VAL [2.42 4.28 0.4  1.74]
+    MET [2.02 3.02 0.5  1.83]
+    TYR [3.15 3.3  0.61 2.17]
+    ILE [3.1  4.   0.45 1.74]
+    LEU [2.17 3.97 0.47 1.99]
+    PHE [1.55 3.23 1.   2.05]
+    TRP [1.58 3.17 0.8  2.4 ]
+bb env
+0.06454591736864689 2.0 0.5 2.0
+
+144 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 19      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_19
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_19/5m96.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 5m96
+DEBUG: Worker 3elo failed with exit code 1
+3elo WORKER_FAIL
+
+Median RMSD 0.00 0.00
+hb  -2.116142990089123 -2.096947109339297 -1.7189812031293323 -0.4814948629601344
+sheet 0.188
+env
+    ASP [-1.27  5.77  1.06  0.83]
+    GLU [-1.43  5.22  0.3   1.35]
+    LYS [-4.49  5.39  0.8   1.19]
+    HIS [1.87 2.74 0.51 1.25]
+    ARG [-4.37  5.46  0.81  1.65]
+    GLY [-0.74 -0.5   0.23  1.01]
+    ASN [-0.17 -0.79  0.31  1.07]
+    GLN [-0.63  5.38  0.47  1.83]
+    ALA [1.68 3.82 0.6  1.3 ]
+    SER [ 0.15 -0.57  0.48  1.41]
+    THR [-0.53 -0.37  0.14  1.22]
+    PRO [-0.62  5.57 -0.2   1.46]
+    CYS [1.92 3.45 0.57 1.37]
+    VAL [2.46 4.27 0.4  1.74]
+    MET [2.05 3.03 0.5  1.83]
+    TYR [3.18 3.29 0.61 2.17]
+    ILE [3.13 3.99 0.46 1.75]
+    LEU [2.2  3.96 0.47 2.01]
+    PHE [1.59 3.23 1.   2.06]
+    TRP [1.6  3.17 0.8  2.42]
+bb env
+0.08128166986621063 2.0 0.5 2.0
+
+92 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 20      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_20
+
+DEBUG: Worker 5xm3 failed with exit code 1
+5xm3 WORKER_FAIL
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_20/4a25.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 4a25
+
+Median RMSD 0.00 0.00
+hb  -2.1237432046779703 -2.1048550198453757 -1.7119276286555893 -0.4852874973430538
+sheet 0.190
+env
+    ASP [-1.29  5.78  1.06  0.81]
+    GLU [-1.44  5.23  0.3   1.37]
+    LYS [-4.52  5.4   0.81  1.18]
+    HIS [1.89 2.72 0.52 1.26]
+    ARG [-4.37  5.47  0.81  1.65]
+    GLY [-0.73 -0.5   0.24  0.99]
+    ASN [-0.14 -0.8   0.31  1.06]
+    GLN [-0.64  5.39  0.47  1.86]
+    ALA [1.71 3.83 0.61 1.3 ]
+    SER [ 0.17 -0.57  0.48  1.4 ]
+    THR [-0.51 -0.37  0.14  1.22]
+    PRO [-0.61  5.57 -0.2   1.46]
+    CYS [1.95 3.46 0.57 1.36]
+    VAL [2.5  4.25 0.41 1.73]
+    MET [2.08 3.03 0.51 1.83]
+    TYR [3.21 3.29 0.61 2.17]
+    ILE [3.16 3.99 0.46 1.76]
+    LEU [2.24 3.96 0.48 2.02]
+    PHE [1.62 3.23 1.   2.06]
+    TRP [1.61 3.17 0.8  2.43]
+bb env
+0.09799819799398082 2.0 0.5 2.0
+
+71 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 21      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_21
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_21/3q0w.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 3q0w
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_21/2o5r.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 2o5r
+
+Median RMSD 0.00 0.00
+hb  -2.131267913797364 -2.1123907943782885 -1.7045829412628888 -0.48901335312774785
+sheet 0.193
+env
+    ASP [-1.31  5.78  1.07  0.8 ]
+    GLU [-1.47  5.23  0.31  1.37]
+    LYS [-4.55  5.4   0.81  1.19]
+    HIS [1.9  2.71 0.52 1.27]
+    ARG [-4.38  5.48  0.81  1.66]
+    GLY [-0.73 -0.5   0.24  0.97]
+    ASN [-0.12 -0.81  0.31  1.07]
+    GLN [-0.66  5.4   0.47  1.88]
+    ALA [1.73 3.82 0.61 1.31]
+    SER [ 0.19 -0.57  0.48  1.39]
+    THR [-0.5  -0.38  0.13  1.23]
+    PRO [-0.59  5.58 -0.19  1.45]
+    CYS [1.98 3.47 0.58 1.36]
+    VAL [2.54 4.24 0.42 1.73]
+    MET [2.11 3.03 0.51 1.83]
+    TYR [3.23 3.28 0.61 2.17]
+    ILE [3.2  3.99 0.46 1.77]
+    LEU [2.27 3.95 0.48 2.03]
+    PHE [1.66 3.24 1.   2.08]
+    TRP [1.63 3.16 0.81 2.45]
+bb env
+0.11467252352659757 2.0 0.5 2.0
+
+68 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 22      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_22
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_22/2d2m.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 2d2m
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_22/1wr6.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 1wr6
+
+Median RMSD 0.00 0.00
+hb  -2.1386907958941856 -2.119622147845877 -1.698301221001461 -0.49265133221473006
+sheet 0.195
+env
+    ASP [-1.32  5.79  1.07  0.81]
+    GLU [-1.48  5.23  0.31  1.39]
+    LYS [-4.57  5.4   0.81  1.2 ]
+    HIS [1.92 2.71 0.52 1.28]
+    ARG [-4.39  5.48  0.81  1.67]
+    GLY [-0.73 -0.5   0.24  0.95]
+    ASN [-0.09 -0.82  0.31  1.08]
+    GLN [-0.67  5.4   0.47  1.9 ]
+    ALA [1.75 3.82 0.61 1.31]
+    SER [ 0.22 -0.56  0.47  1.39]
+    THR [-0.48 -0.38  0.13  1.24]
+    PRO [-0.58  5.58 -0.19  1.45]
+    CYS [2.01 3.48 0.58 1.36]
+    VAL [2.59 4.23 0.42 1.74]
+    MET [2.13 3.03 0.51 1.83]
+    TYR [3.26 3.26 0.62 2.16]
+    ILE [3.24 3.99 0.47 1.78]
+    LEU [2.3  3.95 0.49 2.04]
+    PHE [1.7  3.24 1.   2.09]
+    TRP [1.66 3.16 0.81 2.47]
+bb env
+0.13191520431855353 2.0 0.5 2.0
+
+62 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 23      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_23
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_23/2ciw.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 2ciw
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_23/6sdk.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 6sdk
+
+Median RMSD 0.00 0.00
+hb  -2.146068064616076 -2.127324887723506 -1.6907560074920094 -0.4962623395692035
+sheet 0.197
+env
+    ASP [-1.34  5.79  1.08  0.82]
+    GLU [-1.5   5.24  0.31  1.41]
+    LYS [-4.59  5.4   0.81  1.22]
+    HIS [1.94 2.71 0.52 1.29]
+    ARG [-4.39  5.49  0.81  1.69]
+    GLY [-0.74 -0.5   0.24  0.94]
+    ASN [-0.07 -0.83  0.32  1.11]
+    GLN [-0.7   5.4   0.47  1.93]
+    ALA [1.77 3.81 0.61 1.31]
+    SER [ 0.25 -0.55  0.47  1.39]
+    THR [-0.48 -0.38  0.13  1.26]
+    PRO [-0.55  5.58 -0.19  1.46]
+    CYS [2.03 3.49 0.59 1.36]
+    VAL [2.63 4.21 0.43 1.74]
+    MET [2.16 3.03 0.51 1.84]
+    TYR [3.28 3.25 0.62 2.17]
+    ILE [3.27 3.99 0.47 1.79]
+    LEU [2.34 3.93 0.49 2.05]
+    PHE [1.73 3.23 1.   2.1 ]
+    TRP [1.69 3.16 0.81 2.48]
+bb env
+0.14815873937836047 2.0 0.5 2.0
+
+82 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 24      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_24
+
+DEBUG: Worker 3ret failed with exit code 1
+3ret WORKER_FAIL
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_24/5kz9.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 5kz9
+
+Median RMSD 0.00 0.00
+hb  -2.1529356115131417 -2.133944630858564 -1.6825011880715461 -0.49964709634284116
+sheet 0.198
+env
+    ASP [-1.35  5.79  1.08  0.82]
+    GLU [-1.52  5.24  0.32  1.43]
+    LYS [-4.61  5.41  0.82  1.22]
+    HIS [1.95 2.71 0.52 1.3 ]
+    ARG [-4.38  5.49  0.81  1.7 ]
+    GLY [-0.76 -0.49  0.24  0.93]
+    ASN [-0.05 -0.83  0.32  1.13]
+    GLN [-0.72  5.4   0.47  1.95]
+    ALA [1.79 3.8  0.61 1.31]
+    SER [ 0.27 -0.54  0.47  1.39]
+    THR [-0.47 -0.38  0.12  1.27]
+    PRO [-0.53  5.58 -0.18  1.46]
+    CYS [2.05 3.5  0.59 1.35]
+    VAL [2.67 4.2  0.43 1.75]
+    MET [2.18 3.04 0.52 1.84]
+    TYR [3.3  3.25 0.62 2.17]
+    ILE [3.3  3.99 0.47 1.8 ]
+    LEU [2.37 3.93 0.5  2.05]
+    PHE [1.76 3.22 0.99 2.11]
+    TRP [1.72 3.16 0.82 2.49]
+bb env
+0.16354857104263357 2.0 0.5 2.0
+
+55 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 25      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_25
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_25/4usc.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 4usc
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_25/2fon.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 2fon
+
+Median RMSD 0.00 0.00
+hb  -2.16044759890206 -2.141958400964303 -1.675895342385189 -0.5032939201477168
+sheet 0.198
+env
+    ASP [-1.35  5.8   1.08  0.82]
+    GLU [-1.52  5.25  0.32  1.43]
+    LYS [-4.63  5.42  0.82  1.23]
+    HIS [1.98 2.71 0.52 1.31]
+    ARG [-4.35  5.51  0.81  1.72]
+    GLY [-0.75 -0.49  0.24  0.91]
+    ASN [-0.03 -0.84  0.32  1.14]
+    GLN [-0.74  5.4   0.48  1.96]
+    ALA [1.82 3.78 0.61 1.3 ]
+    SER [ 0.3  -0.52  0.46  1.38]
+    THR [-0.46 -0.38  0.12  1.27]
+    PRO [-0.52  5.58 -0.18  1.46]
+    CYS [2.08 3.5  0.59 1.34]
+    VAL [2.71 4.18 0.44 1.74]
+    MET [2.2  3.05 0.52 1.85]
+    TYR [3.33 3.25 0.62 2.18]
+    ILE [3.34 3.98 0.47 1.8 ]
+    LEU [2.41 3.92 0.5  2.06]
+    PHE [1.79 3.21 0.99 2.11]
+    TRP [1.75 3.17 0.82 2.49]
+bb env
+0.182370955770811 2.0 0.5 2.0
+
+129 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 26      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_26
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_26/5nl7.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 5nl7
+DEBUG: Worker 1f5n failed with exit code 1
+1f5n WORKER_FAIL
+
+Median RMSD 0.00 0.00
+hb  -2.167145195565878 -2.1490026026111777 -1.6706078886751892 -0.5065303003702922
+sheet 0.198
+env
+    ASP [-1.35  5.81  1.08  0.82]
+    GLU [-1.54  5.26  0.33  1.44]
+    LYS [-4.64  5.43  0.83  1.24]
+    HIS [2.01 2.72 0.53 1.32]
+    ARG [-4.33  5.52  0.81  1.74]
+    GLY [-0.75 -0.49  0.24  0.89]
+    ASN [-0.01 -0.84  0.32  1.14]
+    GLN [-0.76  5.4   0.48  1.97]
+    ALA [1.85 3.77 0.61 1.28]
+    SER [ 0.33 -0.51  0.46  1.38]
+    THR [-0.44 -0.39  0.11  1.27]
+    PRO [-0.51  5.58 -0.18  1.45]
+    CYS [2.12 3.51 0.59 1.32]
+    VAL [2.76 4.16 0.44 1.74]
+    MET [2.22 3.05 0.52 1.85]
+    TYR [3.35 3.25 0.62 2.2 ]
+    ILE [3.38 3.97 0.47 1.8 ]
+    LEU [2.45 3.91 0.51 2.06]
+    PHE [1.83 3.2  0.98 2.11]
+    TRP [1.78 3.17 0.82 2.49]
+bb env
+0.19916810624942907 2.0 0.5 2.0
+
+104 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 27      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_27
+
+DEBUG: Worker 3tri failed with exit code 1
+3tri WORKER_FAIL
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_27/1m70.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 1m70
+
+Median RMSD 0.00 0.00
+hb  -2.173036042199164 -2.1554101453352112 -1.6671266626170342 -0.5093899559793161
+sheet 0.198
+env
+    ASP [-1.34  5.81  1.08  0.81]
+    GLU [-1.55  5.26  0.33  1.45]
+    LYS [-4.66  5.43  0.83  1.26]
+    HIS [2.03 2.73 0.53 1.33]
+    ARG [-4.3   5.53  0.81  1.76]
+    GLY [-0.74 -0.5   0.24  0.86]
+    ASN [ 0.02 -0.84  0.32  1.15]
+    GLN [-0.78  5.41  0.48  1.98]
+    ALA [1.88 3.76 0.61 1.27]
+    SER [ 0.35 -0.5   0.45  1.38]
+    THR [-0.44 -0.38  0.11  1.27]
+    PRO [-0.5   5.59 -0.19  1.44]
+    CYS [2.15 3.51 0.6  1.3 ]
+    VAL [2.79 4.14 0.44 1.74]
+    MET [2.24 3.05 0.52 1.86]
+    TYR [3.37 3.25 0.62 2.21]
+    ILE [3.41 3.96 0.48 1.8 ]
+    LEU [2.48 3.9  0.51 2.06]
+    PHE [1.86 3.19 0.98 2.11]
+    TRP [1.8  3.17 0.82 2.49]
+bb env
+0.2140109361432336 2.0 0.5 2.0
+
+53 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 28      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_28
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_28/1oz6.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 1oz6
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_28/3av2.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 3av2
+
+Median RMSD 0.00 0.00
+hb  -2.1789825029646486 -2.1622897523673466 -1.6655547890842113 -0.5122817000452949
+sheet 0.197
+env
+    ASP [-1.33  5.83  1.08  0.8 ]
+    GLU [-1.55  5.27  0.33  1.45]
+    LYS [-4.67  5.44  0.83  1.27]
+    HIS [2.05 2.74 0.53 1.34]
+    ARG [-4.3   5.54  0.81  1.76]
+    GLY [-0.74 -0.5   0.24  0.84]
+    ASN [ 0.04 -0.85  0.32  1.15]
+    GLN [-0.79  5.42  0.48  1.99]
+    ALA [1.91 3.76 0.61 1.25]
+    SER [ 0.38 -0.48  0.44  1.37]
+    THR [-0.43 -0.39  0.1   1.28]
+    PRO [-0.48  5.6  -0.19  1.45]
+    CYS [2.19 3.5  0.6  1.29]
+    VAL [2.83 4.13 0.45 1.74]
+    MET [2.25 3.05 0.52 1.86]
+    TYR [3.4  3.26 0.62 2.19]
+    ILE [3.44 3.95 0.48 1.81]
+    LEU [2.51 3.9  0.52 2.06]
+    PHE [1.89 3.19 0.97 2.12]
+    TRP [1.81 3.17 0.82 2.48]
+bb env
+0.22908030282655148 2.0 0.5 2.0
+
+68 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 29      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_29
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_29/5ja4.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 5ja4
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_29/2bxb.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 2bxb
+
+Median RMSD 0.00 0.00
+hb  -2.185438329942671 -2.1689511179906718 -1.661420084248948 -0.5154513357320498
+sheet 0.195
+env
+    ASP [-1.32  5.84  1.09  0.81]
+    GLU [-1.56  5.27  0.33  1.46]
+    LYS [-4.69  5.43  0.83  1.28]
+    HIS [2.06 2.73 0.53 1.35]
+    ARG [-4.3   5.55  0.81  1.79]
+    GLY [-0.76 -0.5   0.25  0.83]
+    ASN [ 0.05 -0.85  0.32  1.16]
+    GLN [-0.8   5.43  0.49  2.  ]
+    ALA [1.94 3.75 0.61 1.25]
+    SER [ 0.4  -0.47  0.44  1.36]
+    THR [-0.41 -0.39  0.1   1.3 ]
+    PRO [-0.47  5.6  -0.19  1.45]
+    CYS [2.23 3.49 0.61 1.29]
+    VAL [2.86 4.12 0.45 1.76]
+    MET [2.26 3.05 0.53 1.88]
+    TYR [3.43 3.27 0.62 2.19]
+    ILE [3.47 3.94 0.48 1.82]
+    LEU [2.54 3.9  0.52 2.08]
+    PHE [1.92 3.18 0.97 2.13]
+    TRP [1.83 3.17 0.82 2.47]
+bb env
+0.24445451357561124 2.0 0.5 2.0
+
+82 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 30      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_30
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_30/2bxh.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 2bxh
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_30/4xkb.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 4xkb
+
+Median RMSD 0.00 0.00
+hb  -2.191847229141677 -2.175365907951703 -1.660458669975955 -0.5184845522947754
+sheet 0.195
+env
+    ASP [-1.31  5.86  1.09  0.81]
+    GLU [-1.57  5.26  0.33  1.45]
+    LYS [-4.7   5.43  0.83  1.29]
+    HIS [2.07 2.73 0.53 1.36]
+    ARG [-4.29  5.55  0.81  1.81]
+    GLY [-0.76 -0.49  0.25  0.83]
+    ASN [ 0.07 -0.85  0.32  1.16]
+    GLN [-0.8   5.44  0.49  2.  ]
+    ALA [1.96 3.75 0.61 1.26]
+    SER [ 0.43 -0.45  0.44  1.34]
+    THR [-0.4  -0.39  0.09  1.32]
+    PRO [-0.47  5.6  -0.19  1.45]
+    CYS [2.27 3.48 0.62 1.29]
+    VAL [2.9  4.12 0.45 1.76]
+    MET [2.27 3.05 0.53 1.89]
+    TYR [3.46 3.28 0.63 2.18]
+    ILE [3.49 3.93 0.48 1.83]
+    LEU [2.57 3.89 0.53 2.1 ]
+    PHE [1.94 3.17 0.97 2.13]
+    TRP [1.84 3.16 0.82 2.47]
+bb env
+0.26033339709356873 2.0 0.5 2.0
+
+58 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 31      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_31
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_31/1dxx.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 1dxx
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_31/1doq.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 1doq
+
+Median RMSD 0.00 0.00
+hb  -2.1980229813369894 -2.1819772184828814 -1.6579789048560358 -0.521392409227911
+sheet 0.194
+env
+    ASP [-1.31  5.87  1.09  0.8 ]
+    GLU [-1.58  5.26  0.33  1.44]
+    LYS [-4.71  5.43  0.83  1.3 ]
+    HIS [2.1  2.73 0.53 1.37]
+    ARG [-4.28  5.56  0.81  1.83]
+    GLY [-0.77 -0.49  0.25  0.82]
+    ASN [ 0.08 -0.85  0.32  1.15]
+    GLN [-0.8   5.45  0.49  2.  ]
+    ALA [1.99 3.74 0.61 1.26]
+    SER [ 0.46 -0.43  0.43  1.32]
+    THR [-0.39 -0.39  0.09  1.32]
+    PRO [-0.46  5.61 -0.19  1.43]
+    CYS [2.31 3.47 0.62 1.29]
+    VAL [2.93 4.12 0.46 1.76]
+    MET [2.28 3.04 0.53 1.91]
+    TYR [3.48 3.28 0.63 2.17]
+    ILE [3.53 3.92 0.48 1.84]
+    LEU [2.61 3.89 0.53 2.1 ]
+    PHE [1.97 3.17 0.97 2.13]
+    TRP [1.85 3.16 0.83 2.48]
+bb env
+0.27585041146617695 2.0 0.5 2.0
+
+58 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 32      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_32
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_32/3dph.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 3dph
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_32/1wve.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 1wve
+
+Median RMSD 0.00 0.00
+hb  -2.203943030745566 -2.1887558864949903 -1.6592024954983526 -0.524197066017254
+sheet 0.194
+env
+    ASP [-1.3   5.88  1.1   0.8 ]
+    GLU [-1.6   5.26  0.34  1.43]
+    LYS [-4.72  5.43  0.83  1.3 ]
+    HIS [2.12 2.73 0.54 1.39]
+    ARG [-4.28  5.56  0.81  1.84]
+    GLY [-0.78 -0.49  0.25  0.8 ]
+    ASN [ 0.09 -0.85  0.32  1.15]
+    GLN [-0.8   5.46  0.49  2.  ]
+    ALA [2.02 3.75 0.61 1.25]
+    SER [ 0.49 -0.42  0.42  1.3 ]
+    THR [-0.39 -0.39  0.08  1.33]
+    PRO [-0.45  5.62 -0.2   1.41]
+    CYS [2.34 3.46 0.63 1.3 ]
+    VAL [2.97 4.12 0.46 1.76]
+    MET [2.28 3.05 0.53 1.93]
+    TYR [3.5  3.28 0.62 2.16]
+    ILE [3.56 3.92 0.48 1.85]
+    LEU [2.64 3.89 0.54 2.11]
+    PHE [1.99 3.17 0.96 2.12]
+    TRP [1.87 3.15 0.83 2.47]
+bb env
+0.29101025484052895 2.0 0.5 2.0
+
+50 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 33      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_33
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_33/1i1r.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 1i1r
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_33/1aof.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 1aof
+
+Median RMSD 0.00 0.00
+hb  -2.210117790400849 -2.195374798109126 -1.6595558484513069 -0.5271833022138158
+sheet 0.193
+env
+    ASP [-1.31  5.89  1.1   0.78]
+    GLU [-1.62  5.26  0.34  1.42]
+    LYS [-4.74  5.43  0.83  1.29]
+    HIS [2.14 2.73 0.54 1.39]
+    ARG [-4.29  5.56  0.81  1.85]
+    GLY [-0.8  -0.48  0.25  0.8 ]
+    ASN [ 0.1  -0.86  0.32  1.15]
+    GLN [-0.8   5.47  0.49  2.  ]
+    ALA [2.04 3.75 0.61 1.25]
+    SER [ 0.51 -0.4   0.42  1.28]
+    THR [-0.38 -0.39  0.08  1.33]
+    PRO [-0.44  5.62 -0.2   1.39]
+    CYS [2.38 3.46 0.64 1.28]
+    VAL [3.   4.11 0.47 1.77]
+    MET [2.3  3.05 0.53 1.95]
+    TYR [3.52 3.28 0.62 2.16]
+    ILE [3.59 3.93 0.49 1.85]
+    LEU [2.68 3.9  0.54 2.12]
+    PHE [2.02 3.16 0.96 2.11]
+    TRP [1.88 3.14 0.82 2.48]
+bb env
+0.3048098288552555 2.0 0.5 2.0
+
+65 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 34      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_34
+
+DEBUG: Looking for divergence file: condiv_training_results/epoch_00_minibatch_34/1p7i.divergence.pkl
+DEBUG: Divergence file exists: True
+DEBUG: Successfully loaded divergence data for 1p7i
+DEBUG: Worker 2c2l failed with exit code 1
+2c2l WORKER_FAIL
+
+Median RMSD 0.00 0.00
+hb  -2.215628665538315 -2.2012539580147115 -1.660135400812038 -0.5298732687676811
+sheet 0.193
+env
+    ASP [-1.31  5.9   1.1   0.77]
+    GLU [-1.63  5.26  0.34  1.4 ]
+    LYS [-4.76  5.43  0.83  1.29]
+    HIS [2.16 2.74 0.54 1.39]
+    ARG [-4.3   5.57  0.8   1.87]
+    GLY [-0.81 -0.47  0.25  0.79]
+    ASN [ 0.12 -0.85  0.32  1.15]
+    GLN [-0.8   5.48  0.49  2.  ]
+    ALA [2.06 3.75 0.61 1.25]
+    SER [ 0.53 -0.39  0.42  1.27]
+    THR [-0.37 -0.39  0.07  1.34]
+    PRO [-0.44  5.62 -0.2   1.37]
+    CYS [2.41 3.45 0.64 1.28]
+    VAL [3.03 4.11 0.47 1.77]
+    MET [2.31 3.05 0.53 1.97]
+    TYR [3.53 3.28 0.62 2.15]
+    ILE [3.61 3.93 0.49 1.85]
+    LEU [2.71 3.9  0.54 2.11]
+    PHE [2.04 3.17 0.96 2.11]
+    TRP [1.89 3.12 0.82 2.48]
+bb env
+0.3174323648030379 2.0 0.5 2.0
+
+66 seconds elapsed this minibatch
+
+#########################################
+####      EPOCH  0 MINIBATCH 35      ####
+#########################################
+
+condiv_training_results/epoch_00_minibatch_35
+
+DEBUG: Worker 5djt failed with exit code 1
+5djt WORKER_FAIL
+DEBUG: Worker 4hr3 failed with exit code 1
+4hr3 WORKER_FAIL

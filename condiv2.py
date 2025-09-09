@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys, os
 import shutil
 import collections
@@ -31,22 +30,22 @@ try:
     import upside_engine as ue
     import mdtraj_upside as mu
     import mdtraj as md
-    from utils.scale_params import *
+    from scale_params import *
 except:
     raise RuntimeError(f'Error importing upside utils from {py_path}')
 
 np.set_printoptions(precision=2, suppress=True)
 
 ## Important parameters
-n_threads = 10 # this is per protein, must be >3
+n_threads = 4 # this is per protein, must be >3; Peng used 15.
 native_restraint_strength = 1. / 3. ** 2  # weak restraints aiming to hold at about 1.0A RMSD
-rmsd_k = 1  # number of atoms to cut from each end of the protein for RMSD calculation. May cause type errors if too low.
-minibatch_size = 15
+rmsd_k = 5 # number of atoms to cut from each end of the protein for RMSD calculation. May cause type errors if too low.
+minibatch_size = 2 # Peng set this to 15 and had 500 proteins total. 
 scale_factor = 0.0
 balance_target = 0.0
-n_frame = 100.
-sim_time = 1000.
-alpha = 0.5
+n_frame = 1. #100
+sim_time = 10. #1000
+alpha = 0.4 #default 0.5
 
 resnames = ['ALA', 'ARG', 'ASN', 'ASP',
             'CYS', 'GLN', 'GLU', 'GLY',
@@ -330,25 +329,51 @@ def run_minibatch(worker_path, param, initial_param_files, direc, minibatch, sol
     for nm, t in minibatch[::-1]:
         pickled_params = b64encode(cp.dumps(d_obj_param_files)).decode('ascii')
         
-        # Use SLURM srun to launch worker processes
+        # Use SLURM srun to launch worker processes with conda environment Python
+        conda_python = '/scratch/midway3/okleinmann/miniconda3/envs/condiv-env/bin/python'
         args = ['srun', '--nodes=1', '--ntasks=1', '--cpus-per-task=%i'%n_threads, '--slurmd-debug=0',
-                '--output=%s/%s.output_worker'%(direc,nm),
-                'python', worker_path,
+                '--export=ALL', '--output=%s/%s.output_worker'%(direc,nm),
+                conda_python, worker_path,
                 'worker', nm, direc, t.fasta, t.init_path, str(t.n_res), t.chi,
                 pickled_params, str(sim_time)]
-
-        jobs[nm] = sp.Popen(args, close_fds=True)
+        
+        # Set SLURM port range for this subprocess to avoid port exhaustion
+        env = os.environ.copy()
+        env['SLURM_SRUN_COMM_PORT_RANGE'] = '0-65535'
+        
+        # Ensure conda environment is properly set for workers
+        env['CONDA_PREFIX'] = '/scratch/midway3/okleinmann/miniconda3/envs/condiv-env'
+        env['CONDA_DEFAULT_ENV'] = 'condiv-env'
+        env['PATH'] = '/scratch/midway3/okleinmann/miniconda3/envs/condiv-env/bin:' + env.get('PATH', '')
+        
+        # Set library path to prioritize the correct MPI libraries AFTER conda activation
+        # Exclude conda lib to avoid GLIBCXX conflicts
+        env['LD_LIBRARY_PATH'] = "/software/mpich-3.4.3-el8-x86_64+gcc-10.2.0/lib:/software/gcc-10.2.0-el8-x86_64/lib64"
+        
+        jobs[nm] = sp.Popen(args, close_fds=True, env=env)
 
     rmsd = dict()
     change = []
     for nm, j in jobs.items():
         if j.wait() != 0:
+            print(f"DEBUG: Worker {nm} failed with exit code {j.returncode}")
             print(nm, 'WORKER_FAIL')
             continue
-        with open('%s/%s.divergence.pkl' % (direc, nm), 'rb') as f:
-            divergence = cp.load(f)
-            rmsd[nm] = (divergence['rmsd_restrain'], divergence['rmsd'])
-            change.append(divergence['contrast'])
+        
+        divergence_file = '%s/%s.divergence.pkl' % (direc, nm)
+        print(f"DEBUG: Looking for divergence file: {divergence_file}")
+        print(f"DEBUG: Divergence file exists: {os.path.exists(divergence_file)}")
+        
+        try:
+            with open(divergence_file, 'rb') as f:
+                divergence = cp.load(f)
+                rmsd[nm] = (divergence['rmsd_restrain'], divergence['rmsd'])
+                change.append(divergence['contrast'])
+                print(f"DEBUG: Successfully loaded divergence data for {nm}")
+        except Exception as e:
+            print(f"DEBUG: Failed to load divergence file for {nm}: {e}")
+            print(nm, 'WORKER_FAIL')
+            continue
     if not change:
         raise RuntimeError('All jobs failed')
 
@@ -419,7 +444,10 @@ def compute_divergence(config_base, pos, mode=0):
         raise
 
     # engine = ue.Upside(pos.shape[1], config_base)
+    print(f"DEBUG: compute_divergence creating Upside engine with config_base = {config_base}")
+    print(f"DEBUG: config_base type = {type(config_base)}, exists = {os.path.exists(config_base)}")
     engine = ue.Upside(config_base)
+    print(f"DEBUG: Upside engine created successfully in compute_divergence")
     contrast = Update([], [], [], [], [], [], [], [], [], [], [], [], [], [])
     n_restype = len(restype)
     n_res = len(resnames)
@@ -475,6 +503,15 @@ def compute_frame_properties(argv):
     trajs = argv[2]
     rep_id = argv[3]
     start = argv[4]
+    
+    print(f"DEBUG: compute_frame_properties called with:")
+    print(f"DEBUG:   path_code = {path_code}")
+    print(f"DEBUG:   config_base = {config_base}")
+    print(f"DEBUG:   trajs = {trajs}")
+    print(f"DEBUG:   rep_id = {rep_id}")
+    print(f"DEBUG:   config_base exists = {os.path.exists(config_base)}")
+    print(f"DEBUG:   trajs exists = {os.path.exists(trajs)}")
+    print(f"DEBUG:   current working directory = {os.getcwd()}")
 
     ## calculate the rmsd
     # get native structure
@@ -494,7 +531,10 @@ def compute_frame_properties(argv):
     pot = ["rotamer", "sigmoid_coupling_environment", "bb_sigmoid_coupling_environment", "hbond_energy", "rama_map_pot"]
     n_pot = len(pot)
     enregies = np.zeros((n_pot + 1, SN))
+    print(f"DEBUG: About to create Upside engine with config_base = {config_base}")
+    print(f"DEBUG: config_base type = {type(config_base)}")
     engine = ue.Upside(config_base)
+    print(f"DEBUG: Upside engine created successfully")
     for i in range(SN):
         enregies[0, i] = engine.energy(xyz[i])
         for j in range(n_pot):
@@ -508,10 +548,19 @@ def compute_frame_divergence(argv):
     trajs = argv[1]
     mode = argv[2]
     start = argv[3]
+    
+    print(f"DEBUG: compute_frame_divergence called with:")
+    print(f"DEBUG:   config_base = {config_base}")
+    print(f"DEBUG:   trajs = {trajs}")
+    print(f"DEBUG:   mode = {mode}")
+    print(f"DEBUG:   config_base exists = {os.path.exists(config_base)}")
+    print(f"DEBUG:   trajs exists = {os.path.exists(trajs)}")
     with tb.open_file(trajs) as t:
         o = t.root.output
         xyz = o.pos[start:, 0]
+    print(f"DEBUG: About to call compute_divergence with config_base = {config_base}")
     div = compute_divergence(config_base, xyz, mode)
+    print(f"DEBUG: compute_divergence completed successfully")
     div = [x for x in div]
     return div
 
@@ -539,8 +588,8 @@ def main_worker():
     # with open(param_files['hb'])    as f: hb        = float(f.read())
     # with open(param_files['sheet']) as f: sheet_mix = float(f.read())
 
-    rama_lib_path=upside_path + "parameters/common/rama.dat"
-    rama_ref_path=upside_path + "parameters/common/rama_reference.pkl"
+    rama_lib_path = "/home/okleinmann/upside2-md/py3/parameters/common/rama.dat"
+    rama_ref_path = "/home/okleinmann/upside2-md/py3/parameters/common/rama_reference.pkl"
     assert os.path.exists(rama_lib_path), f"Error: The file '{rama_lib_path}' does not exist."
     assert os.path.exists(rama_ref_path), f"Error: The file '{rama_ref_path}' does not exist."
 
@@ -566,8 +615,11 @@ def main_worker():
     T = np.concatenate([T[0:1], T, T[-1:]])
 
     try:
-        config_base = '%s/%s.base.up' % (direc, code)
+        config_base = os.path.abspath('%s/%s.base.up' % (direc, code))
         configs = [re.sub(r'\.base\.up', '.run.%i.up' % i_rs, config_base) for i_rs in range(len(T))]
+        print(f"DEBUG: config_base = {config_base}")
+        print(f"DEBUG: configs = {configs[:3]}...")  # show first 3 configs
+        print(f"DEBUG: current working directory = {os.getcwd()}")
 
         # for unfolding target
         ru.upside_config(fasta, configs[-1], **kwargs)
@@ -594,7 +646,7 @@ def main_worker():
     j = ru.run_upside('', configs, sim_time, frame_interval, n_threads=n_threads, temperature=T * 0.05,
                       swap_sets=swap_sets, mc_interval=5., replica_interval=5., time_step=0.015, anneal_factor=20.,
                       anneal_start=96., anneal_end=400.)
-    if j.job.wait() != 0: raise RuntimeError('RUN_FAIL')
+    if j.wait() != 0: raise RuntimeError('RUN_FAIL')
 
     divergence = dict()
 
@@ -602,8 +654,12 @@ def main_worker():
     start = int(equil_fraction * n_frame)
 
     argv = [(path_code, configs[1], configs[i], i, start) for i in range(n_threads)]
+    print(f"DEBUG: About to start multiprocessing pool with {n_threads} processes")
+    print(f"DEBUG: argv[0] = {argv[0]}")
+    print(f"DEBUG: All config files exist: {[os.path.exists(cfg) for cfg in [configs[1]] + [configs[i] for i in range(n_threads)]]}")
     pool = Pool(processes=n_threads)
     traj_data = pool.map(compute_frame_properties, argv)
+    print(f"DEBUG: Multiprocessing pool completed successfully")
 
     # output the TM and RMSD of the first replica
     divergence['rmsd_restrain'] = np.mean(traj_data[0][0])

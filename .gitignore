@@ -4,3 +4,8 @@
 *.npy
 *.pyc
 *.fasta
+*.tar.gz
+*.out
+
+
+condiv_training_results/
