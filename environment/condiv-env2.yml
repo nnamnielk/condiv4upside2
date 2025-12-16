@@ -1,0 +1,34 @@
+name: condiv-env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8
+  - numpy=1.21
+  - scipy=1.7
+  - pandas=2.0
+  - matplotlib-base=3.7
+  - pillow=8.4
+  - biopython=1.83
+  - numexpr=2.8
+  - pytables=3.8
+  - theano=1.0.5
+  - pygpu=0.7.6
+  - mdtraj=1.9
+  - prody=2.0
+  - requests
+  - python-dateutil
+  - pytz
+  - importlib-metadata
+  - importlib-resources
+  - kiwisolver=1.4
+  - contourpy=1.1
+  - fonttools=4.53
+  - mako=1.3
+  - markupsafe=2.1
+  - unicodedata2
+  - pip
+  # Optional: MySQL client only (not server)
+  # - mariadb-connector-c
+  # - pip:
+  #     - mysqlclient

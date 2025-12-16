@@ -37,15 +37,15 @@ except:
 np.set_printoptions(precision=2, suppress=True)
 
 ## Important parameters
-n_threads = 4 # this is per protein, must be >3; Peng used 15.
+n_threads = 8 # this is per protein, must be >3; Peng used 15.
 native_restraint_strength = 1. / 3. ** 2  # weak restraints aiming to hold at about 1.0A RMSD
-rmsd_k = 5 # number of atoms to cut from each end of the protein for RMSD calculation. May cause type errors if too low.
-minibatch_size = 2 # Peng set this to 15 and had 500 proteins total. 
-scale_factor = 0.0
-balance_target = 0.0
-n_frame = 1. #100
-sim_time = 10. #1000
-alpha = 0.4 #default 0.5
+rmsd_k = 10 # number of atoms to cut from each end of the protein for RMSD calculation. May cause type errors if too low.
+minibatch_size = 21 # Peng set this to 15 and had 500 proteins total. 
+scale_factor = 0.0 #keep this zero. increasing will lower cooperativity.
+balance_target = 0.0 #deepens native basin. 
+n_frame = 100. #100
+sim_time = 1000. #1000
+alpha = 0.5 #default 0.5
 
 resnames = ['ALA', 'ARG', 'ASN', 'ASP',
             'CYS', 'GLN', 'GLU', 'GLY',
@@ -331,7 +331,7 @@ def run_minibatch(worker_path, param, initial_param_files, direc, minibatch, sol
         
         # Use SLURM srun to launch worker processes with conda environment Python
         conda_python = '/scratch/midway3/okleinmann/miniconda3/envs/condiv-env/bin/python'
-        args = ['srun', '--nodes=1', '--ntasks=1', '--cpus-per-task=%i'%n_threads, '--slurmd-debug=0',
+        args = ['/software/slurm-current-el8-x86_64/bin/srun', '--nodes=1', '--ntasks=1', '--cpus-per-task=%i'%n_threads, '--slurmd-debug=0',
                 '--export=ALL', '--output=%s/%s.output_worker'%(direc,nm),
                 conda_python, worker_path,
                 'worker', nm, direc, t.fasta, t.init_path, str(t.n_res), t.chi,
